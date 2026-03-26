@@ -618,6 +618,40 @@ footer{background:var(--slate-900);border-top:1px solid rgba(255,255,255,.06);pa
   .resp-inner-2col { grid-template-columns: 1fr !important; }
   .resp-grid-3col { grid-template-columns: 1fr !important; }
 }
+
+/* ───────────────────────── IMPACT COUNTERS ───────────────────────── */
+.impact-band{background:var(--slate-900);padding:80px 40px;text-align:center}
+.impact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:40px;max-width:1100px;margin:0 auto}
+.impact-number{font-size:clamp(40px,8vw,72px);font-weight:900;color:white;line-height:1;letter-spacing:-3px}
+.impact-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.5);margin-top:12px;line-height:1.4}
+@media(max-width:768px){.impact-grid{grid-template-columns:repeat(2,1fr);gap:32px}}
+@media(max-width:480px){.impact-grid{grid-template-columns:1fr}}
+
+/* ───────────────────────── TEAM SECTION ───────────────────────── */
+.resp-team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.team-card{background:var(--white);border:1px solid var(--slate-200);border-radius:var(--radius-lg);padding:28px;text-align:center;transition:all 0.2s}
+.team-card:hover{box-shadow:var(--shadow-md);transform:translateY(-3px)}
+.team-avatar{width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:800;color:white;margin:0 auto 16px;flex-shrink:0}
+.team-name{font-size:16px;font-weight:700;color:var(--slate-900);margin-bottom:4px;letter-spacing:-0.3px}
+.team-role{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--blue);margin-bottom:16px}
+.team-bio-item{font-size:12.5px;color:var(--slate-500);line-height:1.55;margin-bottom:5px;text-align:left}
+@media(max-width:768px){.resp-team-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.resp-team-grid{grid-template-columns:1fr}}
+
+/* ───────────────────────── ESG SECTION ───────────────────────── */
+.esg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
+.esg-card{background:var(--white);border:1px solid #bbf7d0;border-radius:var(--radius-lg);padding:28px;transition:all 0.2s}
+.esg-card:hover{box-shadow:var(--shadow-md);transform:translateY(-3px)}
+.esg-icon{width:44px;height:44px;border-radius:10px;background:var(--green-light);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.esg-icon svg{width:22px;height:22px}
+.esg-card h3{font-size:16px;font-weight:700;color:var(--slate-900);margin-bottom:10px}
+.esg-card p{font-size:13.5px;color:var(--slate-500);line-height:1.65}
+.esg-info-box{background:white;border:1px solid var(--slate-200);border-radius:var(--radius-lg);padding:28px;margin-top:32px;box-shadow:var(--shadow-sm)}
+@media(max-width:768px){.esg-grid{grid-template-columns:1fr}}
+
+/* ───────────────────────── PARTNER LOGOS ───────────────────────── */
+.partner-pill{padding:10px 20px;border:1px solid var(--slate-200);border-radius:8px;font-size:12px;font-weight:700;color:var(--slate-400);background:rgba(255,255,255,0.08);white-space:nowrap;letter-spacing:.02em}
+.partner-logos-wrap{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
 </style>
   <!-- Calendly popup widget -->
   <script>
@@ -668,6 +702,10 @@ footer{background:var(--slate-900);border-top:1px solid rgba(255,255,255,.06);pa
         <a href="#commercials">Commercials<span class="nav-dd-desc">Why it matters commercially</span></a>
       </div>
     </div>
+
+    <a href="#team" class="nav-link">Team</a>
+    <a href="#faq" class="nav-link">FAQ</a>
+    <a href="#esg" class="nav-link">ESG</a>
 
     <a href="mailto:admin@netzeroplatforms.com?subject=Book%20a%20Demo&body=Hi%2C%20I%27d%20like%20to%20book%20a%20demo%20of%20the%20NZP%20platform.%0A%0AName%3A%0ACompany%3A%0ABest%20time%3A" class="nav-cta">Book Demo →</a>
     </div>
@@ -776,11 +814,12 @@ footer{background:var(--slate-900);border-top:1px solid rgba(255,255,255,.06);pa
 <div class="trust-bar">
   <div class="trust-inner">
     <span class="trust-label">Backed by &amp; working with</span>
-    <div class="trust-logos">
-      <span class="trust-logo">Major energy offtake partner — signed ✓</span>
-      <span class="trust-logo">Global FMCG consortium — spent grain, dairy, ice cream &amp; more</span>
-      <span class="trust-logo">US DoD / US Navy ✓</span>
-      <span class="trust-logo">Hitachi / Westinghouse</span>
+    <div class="partner-logos-wrap">
+      <span class="partner-pill">HITACHI ENERGY</span>
+      <span class="partner-pill">WESTINGHOUSE</span>
+      <span class="partner-pill">MAJOR ENERGY OFFTAKE PARTNER</span>
+      <span class="partner-pill">GLOBAL FMCG CONSORTIUM</span>
+      <span class="partner-pill">InEnTec VETERANS</span>
     </div>
   </div>
 </div>
@@ -915,6 +954,28 @@ footer{background:var(--slate-900);border-top:1px solid rgba(255,255,255,.06);pa
     </div>
   </div>
 </section>
+
+<!-- ═══════════ IMPACT COUNTERS ═══════════ -->
+<div class="impact-band">
+  <div class="impact-grid">
+    <div>
+      <div class="impact-number" data-target="200" data-suffix="+">0</div>
+      <div class="impact-label">Systems Deployed Globally</div>
+    </div>
+    <div>
+      <div class="impact-number" data-target="25" data-suffix="+">0</div>
+      <div class="impact-label">Years of Commercial Operation</div>
+    </div>
+    <div>
+      <div class="impact-number" data-target="10000" data-suffix="°C">0</div>
+      <div class="impact-label">Plasma Arc Temperature</div>
+    </div>
+    <div>
+      <div class="impact-number" data-target="50" data-suffix="+">0</div>
+      <div class="impact-label">Countries With Active PFAS Regulations</div>
+    </div>
+  </div>
+</div>
 
 <!-- ═══════════ PHASES ═══════════ -->
 <section class="section alt-bg" id="phases">
@@ -1099,20 +1160,69 @@ footer{background:var(--slate-900);border-top:1px solid rgba(255,255,255,.06);pa
   </div>
 </section>
 
+<!-- ═══════════ TEAM ═══════════ -->
+<section class="section" id="team" style="background:var(--slate-50)">
+  <div class="section-inner">
+    <div class="text-center" style="margin-bottom:56px">
+      <span class="section-tag">The Team</span>
+      <h2 class="section-h2">Built by people who've done it before.</h2>
+      <p class="section-sub wide">Over 25 years of combined commercial deployment, capital markets experience and deep technology expertise — the NZP team has operated at the highest levels of industry and government.</p>
+    </div>
+    <div class="resp-team-grid">
+      <div class="team-card">
+        <img src="data:image/jpeg;base64,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" alt="Kevin Doyle" style="width:72px;height:72px;border-radius:50%;object-fit:cover;margin:0 auto 16px;display:block;border:3px solid var(--blue-mid)">
+        <div class="team-name">Kevin Doyle</div>
+        <div class="team-role">Chairman</div>
+        <div class="team-bio-item">✦ Dot-com exit veteran with £2.4B transaction experience</div>
+        <div class="team-bio-item">✦ Chase Manhattan capital markets background</div>
+        <div class="team-bio-item">✦ Board-level operator across multiple high-growth ventures</div>
+        <div class="team-bio-item">✦ Strategic deal structuring and investor relations</div>
+      </div>
+      <div class="team-card">
+        <img src="data:image/jpeg;base64,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" alt="Jonathan Watt" style="width:72px;height:72px;border-radius:50%;object-fit:cover;margin:0 auto 16px;display:block;border:3px solid var(--blue-mid)">
+        <div class="team-name">Jonathan Watt</div>
+        <div class="team-role">CEO</div>
+        <div class="team-bio-item">✦ Commercial strategy and partner development</div>
+        <div class="team-bio-item">✦ Driving NZP's go-to-market and offtake relationships</div>
+        <div class="team-bio-item">✦ Deep expertise in waste-to-value commercial frameworks</div>
+        <div class="team-bio-item">✦ Leads executive relationships with energy majors</div>
+      </div>
+      <div class="team-card">
+        <img src="data:image/jpeg;base64,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" alt="Mark Evans-Smith" style="width:72px;height:72px;border-radius:50%;object-fit:cover;margin:0 auto 16px;display:block;border:3px solid #bbf7d0">
+        <div class="team-name">Mark Evans-Smith</div>
+        <div class="team-role">Chief Growth Officer</div>
+        <div class="team-bio-item">✦ Market development and strategic partnerships</div>
+        <div class="team-bio-item">✦ Extensive UK and Europe commercial network</div>
+        <div class="team-bio-item">✦ Leads FMCG consortium and feedstock origination</div>
+        <div class="team-bio-item">✦ Revenue architecture and customer success</div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar" style="background:linear-gradient(135deg,#d97706,#92400e)">RM</div>
+        <div class="team-name">Richard Molsbee</div>
+        <div class="team-role">CTO</div>
+        <div class="team-bio-item">✦ InEnTec veteran — plasma gasification pioneer</div>
+        <div class="team-bio-item">✦ Ex-US government gasification programme roles</div>
+        <div class="team-bio-item">✦ Decades of plasma arc system deployment</div>
+        <div class="team-bio-item">✦ Technology maturity: TRL 8–9, not lab demos</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ═══════════ TECHNOLOGY ═══════════ -->
 <section class="section" id="technology">
   <div class="section-inner">
     <div class="text-center">
       <span class="section-tag">The Technology</span>
       <h2 class="section-h2">We are, at our core, a plasma company.</h2>
-      <p class="section-sub wide">Ultra-High Temperature Submerged Arc Gasification is the moat. The software makes it accessible. The combination is what no competitor can replicate.</p>
+      <p class="section-sub wide"><strong>UHTMG</strong> — Ultra High Temperature Submerged Arc Modular Gasification — is the moat. The software makes it accessible. The combination is what no competitor can replicate.</p>
     </div>
 
     <!-- What is it -->
     <div class="resp-grid-2col-mt">
       <div>
         <span class="section-tag amber">What Is It</span>
-        <h3 style="font-size:28px;font-weight:800;color:var(--slate-900);letter-spacing:-0.5px;margin:16px 0 14px;line-height:1.2">Ultra-High Temperature Submerged Arc Gasification — in plain English</h3>
+        <h3 style="font-size:28px;font-weight:800;color:var(--slate-900);letter-spacing:-0.5px;margin:16px 0 14px;line-height:1.2">UHTMG — Ultra High Temperature Submerged Arc Modular Gasification — in plain English</h3>
         <p style="font-size:15px;color:var(--slate-600);line-height:1.75;margin-bottom:16px">At its simplest: we use an electric plasma arc to generate temperatures exceeding <strong style="color:var(--slate-900)">10,000°C</strong> — comparable to the surface of the sun — inside a sealed chamber. Waste goes in. At those temperatures, every organic molecule is completely broken apart at the atomic level.</p>
         <p style="font-size:15px;color:var(--slate-600);line-height:1.75;margin-bottom:16px">What comes out is <strong style="color:var(--slate-900)">clean synthesis gas (syngas)</strong> — a mixture of hydrogen and carbon monoxide — plus a vitrified, glass-like slag from the inorganic materials. No ash. No dioxins. No tar. No residue requiring landfill.</p>
         <p style="font-size:15px;color:var(--slate-600);line-height:1.75">The syngas is the feedstock for everything that follows: hydrogen, SAF via Fischer-Tropsch synthesis, ammonia via Haber-Bosch, renewable natural gas, or direct power generation. The process is modular. The output is configurable. The underlying physics are unbeatable.</p>
@@ -1135,6 +1245,12 @@ footer{background:var(--slate-900);border-top:1px solid rgba(255,255,255,.06);pa
           <p style="font-size:12px;color:rgba(255,255,255,.4);margin-top:16px;line-height:1.6">The temperature differential is not incremental. It is a fundamental physical difference that competing technologies cannot overcome through engineering optimisation alone.</p>
         </div>
       </div>
+    </div>
+
+    <!-- Atmospheric image placeholder -->
+    <div style="margin-top:48px;background:linear-gradient(135deg,#0c4a6e 0%,#1e293b 35%,#0f172a 65%,#1d4ed8 100%);height:280px;border-radius:var(--radius-xl);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px">
+      <div style="font-size:52px">⚡</div>
+      <div style="font-size:15px;font-weight:700;color:rgba(255,255,255,.85);letter-spacing:.04em;text-align:center;text-transform:uppercase">Ultra High Temperature Submerged Arc Modular Gasification — In Operation</div>
     </div>
 
     <!-- The delivery chain -->
@@ -1309,6 +1425,163 @@ document.getElementById('nzp-contact-form').addEventListener('submit', async fun
 });
 </script>
 
+<!-- ═══════════ ESG ═══════════ -->
+<!-- ═══════════ FAQ ═══════════ -->
+<section class="section" id="faq" style="background:var(--slate-50)">
+  <div class="section-inner">
+    <div class="text-center" style="margin-bottom:48px">
+      <span class="section-tag">FAQ</span>
+      <h2 class="section-h2">The questions we always get asked.</h2>
+      <p class="section-sub wide">Straight answers. No chemistry lectures.</p>
+    </div>
+    <div style="max-width:780px;margin:0 auto" id="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          What exactly is UHTMG technology?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a">
+          <p>UHTMG — Ultra High Temperature Submerged Arc Modular Gasification — uses a plasma arc to generate temperatures exceeding 10,000°C inside a sealed chamber. At these temperatures, any organic material is completely broken apart at the molecular level. The output is clean synthesis gas (syngas) — hydrogen and carbon monoxide — plus an inert, vitrified slag. No ash, no dioxins, no residue. The technology has been operating commercially for 25+ years across 200+ systems globally.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          What does "model first, invest later" actually mean?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a">
+          <p>Traditional waste-to-energy projects commit £100M+ of capital before the economics are validated. NZP inverts that. Our software platform lets you input your actual waste data and see the full commercial model — yields, revenue mix, payback period, carbon credits — before a single pound is committed. Only when the numbers make sense do you move to the investment phase, with offtake partners already in place.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          What feedstocks can UHTMG handle?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a">
+          <p>The platform supports hundreds of feedstock profiles — municipal solid waste (MSW), industrial waste, agricultural residues, spent grain, tyres, medical waste, PFAS-contaminated materials, and mixed industrial streams. Unlike conventional gasification, UHTMG requires no pre-sorting, no pre-treatment, and no specific calorific value. You bring your waste stream; the model handles the chemistry.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Why is UHTMG the only technology that can destroy PFAS?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a">
+          <p>PFAS "forever chemicals" contain carbon-fluorine bonds — the strongest bonds in organic chemistry. Breaking them requires sustained temperatures above 10,000°C. Every competing technology — incineration, pyrolysis, hydrothermal processing — falls short. Only plasma arc gasification operating at UHTMG temperatures completely mineralises PFAS compounds into stable, inert substances. This is a rapidly growing regulatory obligation affecting thousands of industrial operators across 50+ countries.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          What outputs can the syngas be converted into?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a">
+          <p>The syngas produced by UHTMG is a configurable feedstock. Depending on the project economics and offtake agreements, it can be converted into: green hydrogen (via separation), sustainable aviation fuel or SAF (via Fischer-Tropsch synthesis), ammonia (via Haber-Bosch), renewable natural gas, or direct electricity generation. The NZP platform models all pathways simultaneously so you can compare the economics of each output scenario before committing.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          How does the phased investment model work?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a">
+          <p>NZP structures projects in four phases: (1) Software modelling — validate your waste stream and commercial case using our platform; (2) Pilot — deploy a modular unit at demonstration scale to prove yield with real feedstock; (3) Commercial — scale to full commercial throughput with offtake already contracted; (4) Expansion — replicate the model across additional sites or waste streams. Capital is deployed at each phase gate only when commercial milestones are met.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Who are the offtake and technology partners?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a">
+          <p>Equipment is supplied through Hitachi Energy and Westinghouse — two of the world's leading industrial technology groups. Fischer-Tropsch and Haber-Bosch synthesis partners are in place for downstream conversion. Offtake is contracted with a major energy partner (not named publicly at this stage). The full back-end of the value chain is covered — NZP brings the waste stream, the software, and the commercial architecture.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+.faq-item{border-bottom:1px solid var(--slate-200);padding:4px 0}
+.faq-item:first-child{border-top:1px solid var(--slate-200)}
+.faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;padding:20px 0;background:none;border:none;cursor:pointer;font-size:16px;font-weight:600;color:var(--slate-900);text-align:left;gap:16px;line-height:1.4}
+.faq-q:hover{color:var(--blue)}
+.faq-icon{width:20px;height:20px;flex-shrink:0;transition:transform 0.25s;color:var(--slate-400)}
+.faq-q.open .faq-icon{transform:rotate(180deg)}
+.faq-a{display:none;padding-bottom:20px}
+.faq-a.open{display:block}
+.faq-a p{font-size:14.5px;color:var(--slate-600);line-height:1.75}
+</style>
+
+<script>
+function toggleFaq(btn){
+  const isOpen = btn.classList.contains('open');
+  document.querySelectorAll('.faq-q.open').forEach(function(b){
+    b.classList.remove('open');
+    b.nextElementSibling.classList.remove('open');
+  });
+  if(!isOpen){ btn.classList.add('open'); btn.nextElementSibling.classList.add('open'); }
+}
+</script>
+
+<section class="section" id="esg" style="background:var(--green-light)">
+  <div class="section-inner">
+    <div class="text-center" style="margin-bottom:48px">
+      <span class="section-tag green">Sustainability &amp; ESG</span>
+      <h2 class="section-h2">Every tonne of waste is a tonne of carbon avoided.</h2>
+      <p class="section-sub wide">Plasma gasification doesn't just create value from waste — it eliminates the downstream carbon, landfill liability and toxic legacy that conventional disposal leaves behind.</p>
+    </div>
+    <div class="esg-grid">
+      <div class="esg-card">
+        <div class="esg-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2z"/><path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg>
+        </div>
+        <h3>Carbon Impact</h3>
+        <p>Every tonne processed replaces fossil-derived energy and avoids landfill methane — a greenhouse gas 80x more potent than CO₂ over 20 years. NZP projects qualify for verified carbon credits across multiple registries, creating a secondary revenue stream that strengthens project economics.</p>
+      </div>
+      <div class="esg-card">
+        <div class="esg-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2l8 20M16 2L8 20M5 8h14M5 16h14"/></svg>
+        </div>
+        <h3>PFAS Elimination</h3>
+        <p>Plasma arc temperatures above 10,000°C are the only commercially proven method to completely destroy PFAS "forever chemicals" — breaking the C-F bond that no incineration or landfill system can touch. With 50+ countries now regulating PFAS disposal, this capability is rapidly becoming a mandatory requirement for waste operators.</p>
+      </div>
+      <div class="esg-card">
+        <div class="esg-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 014-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 01-4 4H3"/></svg>
+        </div>
+        <h3>Circular Economy</h3>
+        <p>Waste enters the system and exits as hydrogen, SAF, power or construction-grade vitrified slag — nothing goes to landfill. The circular loop is complete: industrial waste becomes aviation fuel, green hydrogen or base materials, with zero residue requiring disposal and a byproduct that generates its own revenue.</p>
+      </div>
+    </div>
+    <div class="esg-info-box">
+      <div style="display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap">
+        <div style="flex:1;min-width:240px">
+          <div style="font-size:13px;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:.07em;margin-bottom:10px">UK Net Zero 2050 Alignment</div>
+          <p style="font-size:13.5px;color:var(--slate-600);line-height:1.65">NZP technology directly supports the UK's legally binding net zero 2050 target and the government's Sustainable Aviation Fuel mandate — 10% SAF blend by 2030, rising to 22% by 2040. Every NZP facility is a piece of that infrastructure.</p>
+        </div>
+        <div style="flex:1;min-width:240px">
+          <div style="font-size:13px;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:.07em;margin-bottom:10px">PFAS Regulatory Wave</div>
+          <p style="font-size:13.5px;color:var(--slate-600);line-height:1.65">The EU PFAS restriction proposal covers over 10,000 substances. US EPA PFAS regulations are already in force. Waste operators face mounting liability — NZP provides the only technically validated destruction pathway at commercial scale.</p>
+        </div>
+        <div style="flex:1;min-width:240px">
+          <div style="font-size:13px;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:.07em;margin-bottom:10px">ESG Reporting &amp; Scope 3</div>
+          <p style="font-size:13.5px;color:var(--slate-600);line-height:1.65">Major corporations face increasing Scope 3 emissions obligations. Partnering with NZP allows FMCG producers and waste generators to demonstrate measurable, auditable waste diversion — with verified carbon outcomes that map directly to ESG disclosure frameworks.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ═══════════ FOOTER ═══════════ -->
 <footer>
   <div class="footer-inner">
@@ -1338,6 +1611,9 @@ document.getElementById('nzp-contact-form').addEventListener('submit', async fun
         <div class="footer-col-title">Get In Touch</div>
         <a href="mailto:info@netzeroplatforms.com" class="footer-link">info@netzeroplatforms.com</a>
         <a href="#cta" class="footer-link">Book a demo</a>
+        <a href="#team" class="footer-link">Team</a>
+        <a href="#faq" class="footer-link">FAQ</a>
+        <a href="#esg" class="footer-link">ESG</a>
         <a href="#" class="footer-link">Download overview</a>
         <div style="margin-top:20px">
           <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:rgba(255,255,255,.3);margin-bottom:8px">Backed by</div>
@@ -1353,5 +1629,46 @@ document.getElementById('nzp-contact-form').addEventListener('submit', async fun
   </div>
 </footer>
 
+<script>
+/* ── Animated Impact Counters ── */
+(function(){
+  var counters = document.querySelectorAll('.impact-number[data-target]');
+  if (!counters.length) return;
+
+  function easeOutQuad(t){ return t * (2 - t); }
+
+  function animateCounter(el){
+    var target = parseInt(el.getAttribute('data-target'), 10);
+    var suffix = el.getAttribute('data-suffix') || '';
+    var duration = target >= 10000 ? 2200 : 1600;
+    var start = null;
+
+    function step(timestamp){
+      if (!start) start = timestamp;
+      var elapsed = timestamp - start;
+      var progress = Math.min(elapsed / duration, 1);
+      var eased = easeOutQuad(progress);
+      var current = Math.round(eased * target);
+      el.textContent = current.toLocaleString() + suffix;
+      if (progress < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  if ('IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting){
+          animateCounter(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+    counters.forEach(function(c){ observer.observe(c); });
+  } else {
+    counters.forEach(animateCounter);
+  }
+})();
+</script>
 </body>
 </html>
